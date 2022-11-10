@@ -1,9 +1,11 @@
   //tp6 js and ajax
 
-function loadFileInto(fromFile, whereTo) {
+function loadFileInto(recipeName, listName, whereTo) {
 
     // creating a new XMLHttpRequest object
     ajax = new XMLHttpRequest();
+  
+    fromFile = "recipes.php?recipeName" + recipeName + "&listName" + listName;
 
     // defines the GET/POST method, source, and async value of the AJAX object
     ajax.open("GET", fromFile, true);
@@ -39,9 +41,9 @@ function Recipe(recipeName, contributorName, imageURL, ingredientsURL, equipment
       document.querySelector("#title").innerHTML = this.recipeName;
       document.querySelector("#contributor").innerHTML = this.contributorName;
       document.querySelector("#titleBanner").style.backgroundImage = "url(" + this.imageURL + ")";
-      loadFileInto(this.ingredients, "#ingredients ul");
-      loadFileInto(this.equipment, "#equipment ul");
-      loadFileInto(this.directions, "#directions ol");
+      loadFileInto(this.recipe, "ingredients", "#ingredients ul");
+      loadFileInto(this.recipe, "equipment", "#equipment ul");
+      loadFileInto(this.recipe, "directions", "#directions ol");
 
     }
   }
