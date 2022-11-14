@@ -10,7 +10,7 @@ if ($name == "Maple Brown Sugar Cookies") {
   } elseif ($list == "equipment") {
     include "equipment.html";
     
-  } elseif ($list == "instructions") {
+  } elseif ($list == "directions") {
     include "instructions.html";
     
   } else {
@@ -25,7 +25,7 @@ if ($name == "Maple Brown Sugar Cookies") {
   } elseif ($list == "equipment") {
     include "peach-crisp-equipment.html";
     
-  } elseif ($list == "instructions") {
+  } elseif ($list == "directions") {
     include "peach-crisp-directions.html";
     
   } else {
@@ -40,7 +40,7 @@ if ($name == "Maple Brown Sugar Cookies") {
   } elseif ($list == "equipment") {
     include "wine-mustard-equipment.html";
     
-  } elseif ($list == "instructions") {
+  } elseif ($list == "directions") {
     include "wine-mustard-directions.html";
     
   } else {
